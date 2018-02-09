@@ -95,7 +95,7 @@ export default class SignUpJumbotron extends React.Component {
         <Container>
           <Row>
             <Col className="text-center">
-              <img src="/assets/img/fb-connecting-world.jpg" alt=""/>
+              <img src="/assets/img/fb-connecting-world.png" alt=""/>
             </Col>
             <Col>
               <div className="text-center d-flex mb-1">

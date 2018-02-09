@@ -28,7 +28,7 @@ export default class DashNavBar extends React.Component {
     console.log(this.props.match);
     return (
       <div>
-        <Navbar className="loginNavbar" color="faded" light expand="md">
+        <Navbar className="loginNavbar fixed-top" color="faded" light expand="md">
           <Container>
             <NavbarBrand>
               <Input  value={this.state.search_key} onChange={this.handleChange} type="text" name="search_key" id="search_key" placeholder="Search" />

@@ -28,5 +28,9 @@
 }
 
 .loginNavbar {
-  color: black;
+  background: linear-gradient(#4E69A2, #3B5998);
+}
+
+.fixed-top {
+  position: fixed;
 }
