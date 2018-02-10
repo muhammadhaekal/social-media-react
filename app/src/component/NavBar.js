@@ -48,7 +48,7 @@ export default class Example extends React.Component {
 
   handleKeyPress(event) {
     const handleClick = () => this.handleClick()
-    if(event.key == 'Enter'){
+    if(event.key === 'Enter'){
      handleClick()
     }
   }

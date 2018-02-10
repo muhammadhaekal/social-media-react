@@ -1,69 +1,59 @@
 import React from 'react'
 import DashNavBar from '../component/DashNavBar'
-import {
-  Col,
-  Row,
-  Container,
-  ListGroup,
-  ListGroupItem,
-  Badge
-} from 'reactstrap'
-
-const Group = ["a", "b"]
+import InputStatus from '../component/InputStatus'
+import {Col, Row, Container, ListGroup, ListGroupItem} from 'reactstrap'
+import LeftNavList from '../component/LeftNavList'
+import TimelinePost from '../component/TimelinePost'
 
 export default class App extends React.Component {
 
   render() {
     return (<div>
-      <div className="fixed-top">
+      <div >
         <DashNavBar/>
         <Container>
           <Row className="mt-5 pt-4">
             <Col sm="3">
-              <ListGroup className="mb-2">
-                <ListGroupItem disabled="disabled" >
-                  Muhammad Haekal
-                </ListGroupItem>
-                <ListGroupItem className="d-flex justify-content-between">
-                  News Feed
-                  <span>
-                    <Badge pill="pill">14</Badge>
-                  </span>
-                </ListGroupItem>
-                <ListGroupItem className="d-flex justify-content-between">
-                  Messanger
-                  <span>
-                    <Badge pill="pill">14</Badge>
-                  </span>
-                </ListGroupItem>
-              </ListGroup>
-              <ListGroup>
-                <ListGroupItem disabled="disabled" >
-                  Shortcuts
-                </ListGroupItem>
-                <ListGroupItem className="d-flex justify-content-between">
-                  Group 1
-                  <span>
-                    <Badge pill="pill">14</Badge>
-                  </span>
-                </ListGroupItem>
-                <ListGroupItem className="d-flex justify-content-between">
-                  Group 2
-                  <span>
-                    <Badge pill="pill">14</Badge>
-                  </span>
-                </ListGroupItem>
-                <ListGroupItem className="d-flex justify-content-between">
-                  Group 3
-                  <span>
-                    <Badge pill="pill">14</Badge>
-                  </span>
-                </ListGroupItem>
-              </ListGroup>
+              <div className="fixed-left-navbar">
+                <ListGroup className="mb-2">
+                  <ListGroupItem disabled={true}>
+                    Muhammad Haekal
+                  </ListGroupItem>
+                  <LeftNavList image="/assets/img/messenger-blue-icon.png" name="Messanger" notifSum={14} to={`${this.props.match.url}/groups/impact-byte`}></LeftNavList>
+                  <LeftNavList image="/assets/img/newsfeed-icon.png" name="News Feed" notifSum={14} to="/{this.props.match}/"></LeftNavList>
+                </ListGroup>
+                <ListGroup className="mb-2">
+                  <ListGroupItem disabled={true}>
+                    Shortcuts
+                  </ListGroupItem>
+                  <LeftNavList image="/assets/img/groups-icon.png" name="Impact Byte" notifSum={14} to={`${this.props.match.url}/groups/impactbyte/discussion`}></LeftNavList>
+                  <LeftNavList image="/assets/img/groups-icon.png" name="Bahamut" notifSum={3} to="/"></LeftNavList>
+                  <LeftNavList image="/assets/img/groups-icon.png" name="Behemut" notifSum={2} to="/"></LeftNavList>
+                </ListGroup>
+                <ListGroup>
+                  <ListGroupItem disabled={true}>
+                    Explore
+                  </ListGroupItem>
+                  <LeftNavList image="/assets/img/events-icon.png" name="events" notifSum={2} to="/"></LeftNavList>
+                </ListGroup>
+              </div>
             </Col>
-            <Col sm="6"></Col>
+            <Col sm="6">
+              <InputStatus/>
+              <TimelinePost/>
+              <TimelinePost/>
+              <TimelinePost/>
+              <TimelinePost/>
+              <TimelinePost/>
+              <TimelinePost/>
+              <TimelinePost/>
+              <TimelinePost/>
+              <TimelinePost/>
+            </Col>
             <Col sm="3">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat quia nulla reprehenderit doloremque explicabo quod veniam, quasi maiores autem totam nam necessitatibus, sequi magni dicta obcaecati nostrum dignissimos ad. Reiciendis? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat quia nulla reprehenderit doloremque explicabo quod veniam, quasi maiores autem totam nam necessitatibus, sequi magni dicta obcaecati nostrum dignissimos ad. Reiciendis? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat quia nulla reprehenderit doloremque explicabo quod veniam, quasi maiores autem totam nam necessitatibus, sequi magni dicta obcaecati nostrum dignissimos ad. Reiciendis? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat quia nulla reprehenderit doloremque explicabo quod veniam, quasi maiores autem totam nam necessitatibus, sequi magni dicta obcaecati nostrum dignissimos ad. Reiciendis? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat quia nulla reprehenderit doloremque explicabo quod veniam, quasi maiores autem totam nam necessitatibus, sequi magni dicta obcaecati nostrum dignissimos ad. Reiciendis? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat quia nulla reprehenderit doloremque explicabo quod veniam, quasi maiores autem totam nam necessitatibus, sequi magni dicta obcaecati nostrum dignissimos ad. Reiciendis?
+              <div className="fixed-left-navbar">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam rerum non dolore, fugiat eligendi tempora odit, vero obcaecati expedita quam, saepe nesciunt blanditiis ratione id sunt iste at. Accusamus, vero? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam rerum non dolore, fugiat eligendi tempora odit, vero obcaecati expedita quam, saepe nesciunt blanditiis ratione id sunt iste at. Accusamus, vero? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam rerum non dolore, fugiat eligendi tempora odit, vero obcaecati expedita quam, saepe nesciunt blanditiis ratione id sunt iste at. Accusamus, vero?
+              </div>
             </Col>
           </Row>
         </Container>
@@ -71,9 +61,7 @@ export default class App extends React.Component {
       <Container>
         <Row className="mt-5 pt-4">
           <Col sm="3"></Col>
-          <Col sm="6">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat quia nulla reprehenderit doloremque explicabo quod veniam, quasi maiores autem totam nam necessitatibus, sequi magni dicta obcaecati nostrum dignissimos ad. Reiciendis? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat quia nulla reprehenderit doloremque explicabo quod veniam, quasi maiores autem totam nam necessitatibus, sequi magni dicta obcaecati nostrum dignissimos ad. Reiciendis? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat quia nulla reprehenderit doloremque explicabo quod veniam, quasi maiores autem totam nam necessitatibus, sequi magni dicta obcaecati nostrum dignissimos ad. Reiciendis? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat quia nulla reprehenderit doloremque explicabo quod veniam, quasi maiores autem totam nam necessitatibus, sequi magni dicta obcaecati nostrum dignissimos ad. Reiciendis? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat quia nulla reprehenderit doloremque explicabo quod veniam, quasi maiores autem totam nam necessitatibus, sequi magni dicta obcaecati nostrum dignissimos ad. Reiciendis? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat quia nulla reprehenderit doloremque explicabo quod veniam, quasi maiores autem totam nam necessitatibus, sequi magni dicta obcaecati nostrum dignissimos ad. Reiciendis? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat quia nulla reprehenderit doloremque explicabo quod veniam, quasi maiores autem totam nam necessitatibus, sequi magni dicta obcaecati nostrum dignissimos ad. Reiciendis? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat quia nulla reprehenderit doloremque explicabo quod veniam, quasi maiores autem totam nam necessitatibus, sequi magni dicta obcaecati nostrum dignissimos ad. Reiciendis? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat quia nulla reprehenderit doloremque explicabo quod veniam, quasi maiores autem totam nam necessitatibus, sequi magni dicta obcaecati nostrum dignissimos ad. Reiciendis? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat quia nulla reprehenderit doloremque explicabo quod veniam, quasi maiores autem totam nam necessitatibus, sequi magni dicta obcaecati nostrum dignissimos ad. Reiciendis? Lorem ipsum dolor sit amet, consectetur adipisicing elit. RLorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat quia nulla reprehenderit doloremque explicabo quod veniam, quasi maiores autem totam nam necessitatibus, sequi magni dicta obcaecati nostrum dignissimos ad. Reiciendis? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat quia nulla reprehenderit doloremque explicabo quod veniam, quasi maiores autem totam nam necessitatibus, sequi magni dicta obcaecati nostrum dignissimos ad. Reiciendis? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat quia nulla reprehenderit doloremque explicabo quod veniam, quasi maiores autem totam nam necessitatibus, sequi magni dicta obcaecati nostrum dignissimos ad. Reiciendis? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat quia nulla reprehenderit doloremque explicabo quod veniam, quasi maiores autem totam nam necessitatibus, sequi magni dicta obcaecati nostrum dignissimos ad. Reiciendis? Lorem ipsum dolor sit amet, consectetur adipisicing elit. RLorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat quia nulla reprehenderit doloremque explicabo quod veniam, quasi maiores autem totam nam necessitatibus, sequi magni dicta obcaecati nostrum dignissimos ad. Reiciendis? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat quia nulla reprehenderit doloremque explicabo quod veniam, quasi maiores autem totam nam necessitatibus, sequi magni dicta obcaecati nostrum dignissimos ad. Reiciendis? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat quia nulla reprehenderit doloremque explicabo quod veniam, quasi maiores autem totam nam necessitatibus, sequi magni dicta obcaecati nostrum dignissimos ad. Reiciendis? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat quia nulla reprehenderit doloremque explicabo quod veniam, quasi maiores autem totam nam necessitatibus, sequi magni dicta obcaecati nostrum dignissimos ad. Reiciendis? Lorem ipsum dolor sit amet, consectetur adipisicing elit. R
-          </Col>
+          <Col sm="6"></Col>
           <Col sm="3"></Col>
         </Row>
       </Container>

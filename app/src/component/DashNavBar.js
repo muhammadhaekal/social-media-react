@@ -25,7 +25,6 @@ export default class DashNavBar extends React.Component {
 
 
   render() {
-    console.log(this.props.match);
     return (
       <div>
         <Navbar className="loginNavbar fixed-top" color="faded" light expand="md">

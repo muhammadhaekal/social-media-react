@@ -5,6 +5,7 @@ import {
   BrowserRouter as Router,
   Route,
   Redirect} from 'react-router-dom'
+import Groups from './pages/Groups'
 
 
 
@@ -16,7 +17,8 @@ export default class App extends React.Component {
         <Route exact path='/' render={(props) => (
           <Login {...props} auth={fakeAuth} />
         )}/>
-        <Route path="/dashboard" component={Dashboard}/>
+        <Route exact path="/dashboard" component={Dashboard}/>
+        <Route path="/dashboard/groups/:group_name" component={Groups}/>
       </div>
     </Router>)
   }

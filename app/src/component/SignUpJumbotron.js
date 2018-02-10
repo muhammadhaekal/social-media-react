@@ -104,8 +104,8 @@ export default class SignUpJumbotron extends React.Component {
               </div>
               <div className="mb-1">
                 <div>
-                  <Input value={this.state.email} onChange={this.handleChange} type="text" name="email" id="email" id="TooltipExample" placeholder="Email Address"/>
-                  <Tooltip className = "warning" placement="right" isOpen={this.state.tooltipOpen} target="TooltipExample" >
+                  <Input value={this.state.email} onChange={this.handleChange} type="text" name="email" id="email" placeholder="Email Address"/>
+                  <Tooltip className = "warning" placement="right" isOpen={this.state.tooltipOpen} target="email" >
                     That email is taken. Try another.
                   </Tooltip>
                 </div>

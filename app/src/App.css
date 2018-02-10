@@ -34,3 +34,62 @@
 .fixed-top {
   position: fixed;
 }
+
+.small-icon {
+  height: 25px;
+  width: 25px;
+}
+
+.group-cover-image {
+  width: inherit !important;
+  height: 25rem !important;
+}
+
+.front {
+  z-index: 99;
+}
+
+.behind {
+  z-index: -99;
+}
+
+.inherit {
+  width: inherit;
+}
+.fixed-left-navbar {
+  position: fixed;
+  width: 13%;
+}
+
+html {
+  zoom: 90%;
+}
+
+.sticky {
+  position: sticky;
+}
+
+body {
+  background-color: #E9EBEE;
+}
+
+.profpict-icon{
+  border-color: black;
+  border-width: 2px;
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  margin: auto;
+}
+
+@media (max-width: 1366px) {
+  .fixed-left-navbar {
+    position: fixed;
+    width: 18%;
+  }
+}
+
+.stick {
+  overflow: hidden;
+  position: relative;
+}
